@@ -560,6 +560,19 @@ video {
   --tw-contain-style:  ;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.block{
+  display: block;
+}
+
 .grid{
   display: grid;
 }
@@ -590,6 +603,15 @@ video {
   justify-content: center;
 }
 
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
+.bg-slate-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
 .bg-hero{
   background-image: linear-gradient(rgba(53,82,66,0.5),rgba(47,80,63,0.6)), url('images/hero.jpg');
 }
@@ -602,6 +624,46 @@ video {
   background-position: center;
 }
 
+.text-center{
+  text-align: center;
+}
+
 .font-dosis{
   font-family: Dosis, sans-serif;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-emerald-200{
+  --tw-text-opacity: 1;
+  color: rgb(167 243 208 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.btn{
+  min-width: 180px;
+  border-radius: 9999px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+@media (min-width: 640px){
+  .sm\:text-7xl{
+    font-size: 4.5rem;
+    line-height: 1;
+  }
 }
