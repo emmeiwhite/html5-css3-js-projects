@@ -20,7 +20,7 @@ module.exports = {
         dosis: ["Dosis", "sans-serif"],
       },
       backgroundImage: {
-        hero: "url('images/hero.jpg')",
+        hero: "linear-gradient(rgba(53,82,66,0.5),rgba(47,80,63,0.6)), url('images/hero.jpg')",
       },
     },
   },

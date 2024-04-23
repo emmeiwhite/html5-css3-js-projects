@@ -560,24 +560,38 @@ video {
   --tw-contain-style:  ;
 }
 
-.h-full{
-  height: 100%;
+.grid{
+  display: grid;
+}
+
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .h-screen{
   height: 100vh;
 }
 
-.w-full{
-  width: 100%;
+.w-fit{
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .w-screen{
   width: 100vw;
 }
 
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
 .bg-hero{
-  background-image: url('images/hero.jpg');
+  background-image: linear-gradient(rgba(53,82,66,0.5),rgba(47,80,63,0.6)), url('images/hero.jpg');
 }
 
 .bg-cover{
