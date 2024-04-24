@@ -12,12 +12,48 @@
     />
     <title>Toggle button | Tailwind</title>
   </head>
-  <body>
-    <input
-      type="checkbox"
-      id="check"
-    />
+  <body class="grid place-items-center h-screen">
+    <div class="">
+      <input
+        type="checkbox"
+        id="check"
+        class="hidden"
+      />
 
-    <label for="check">Checkbox</label>
+      <label
+        for="check"
+        class="w-20 h-7 bg-amber-500 block rounded-md relative cursor-pointer checkbox-label border border-[#075ba5]"
+      ></label>
+    </div>
   </body>
 </html>
+
+<style>
+  .checkbox-label::after {
+    content: ".";
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    background: #075ba5;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.625rem; /* Added line-height to vertically center */
+    text-align: center; /* Added text-align to horizontally center */
+    font-size: 1.5rem;
+    color: orange;
+    transition: all 0.5s;
+  }
+
+  #check:checked + .checkbox-label {
+    background-color: #075ba5;
+    border: 1px solid orange;
+  }
+
+  #check:checked + .checkbox-label::after {
+    left: 100%;
+    background-color: orange;
+    color: #075ba5;
+  }
+</style>
