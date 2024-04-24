@@ -12,6 +12,7 @@
     />
     <title>Toggle button | Tailwind</title>
   </head>
+
   <body class="grid place-items-center h-screen">
     <div class="">
       <input
@@ -23,7 +24,23 @@
       <label
         for="check"
         class="w-20 h-7 bg-amber-500 block rounded-md relative cursor-pointer checkbox-label border border-[#075ba5]"
-      ></label>
+      >
+      </label>
+    </div>
+
+    <!-- Let's create the other implementation without Tailwind -->
+    <div class="custom-button-v2">
+      <input
+        type="checkbox"
+        id="check-box"
+      />
+
+      <label
+        for="check-box"
+        class="toggle"
+      >
+        <div class="circle">.</div>
+      </label>
     </div>
   </body>
 </html>
@@ -55,5 +72,48 @@
     left: 100%;
     background-color: orange;
     color: #075ba5;
+  }
+</style>
+
+<style>
+  #check-box {
+    visibility: hidden;
+  }
+  .toggle {
+    display: block;
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    background-color: #f77070;
+    box-shadow: inset 0 2px 10px #555;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.5s ease;
+  }
+
+  .circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: grid;
+    justify-content: center;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 0;
+    position: relative;
+    color: #f77070;
+    box-shadow: 0px 0px 2px 1px #777;
+    font-size: 30px;
+    line-height: 1.5;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #check-box:checked + .toggle .circle {
+    left: 100%;
+  }
+
+  #check-box:checked + .toggle {
+    background-color: green;
   }
 </style>
