@@ -42,6 +42,22 @@
         <div class="circle">.</div>
       </label>
     </div>
+
+    <!-- Real Checkbox Example -->
+
+    <div class="checkbox-wrapper">
+      <input
+        type="checkbox"
+        id="check3"
+      />
+
+      <label
+        for="check3"
+        class="check3"
+      >
+        <div class="checkmark"></div>
+      </label>
+    </div>
   </body>
 </html>
 
@@ -115,5 +131,41 @@
 
   #check-box:checked + .toggle {
     background-color: green;
+  }
+</style>
+
+<style>
+  #check3 {
+    visibility: hidden;
+  }
+  .check3 {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(141, 131, 131);
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: background-color 0.25s ease-in;
+  }
+
+  .checkmark {
+    width: 40px;
+    height: 22px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+    margin-top: -10px;
+    transition: border 0.25s ease-in;
+  }
+
+  #check3:checked + .check3 {
+    background-color: rgb(8, 184, 8);
+  }
+
+  #check3:checked + .check3 .checkmark {
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
   }
 </style>
