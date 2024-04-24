@@ -11,3 +11,55 @@
     @apply px-5 py-2.5 min-w-[180px] rounded-full;
   }
 }
+
+/* --- FOR ANIMATIONS --- */
+.heading {
+  animation: moveToLeft 1s;
+}
+
+.sub-heading {
+  animation: moveToRight 1s;
+}
+
+.main-btn {
+  animation-name: moveToTop;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes moveToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
